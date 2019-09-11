@@ -65,19 +65,19 @@
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
-
 #include <xc.h>
 #include"led.h"
-#include"Seg7.h"
 
-
-
-void main(void) 
+void led2(void) 
 {
-    while(1)
-    {
-        led();    
-        led2();
-    }
+    TRISA=0x00;
+    ANSELA=0x2F;
+    
+    
+        
+        LATA=0xFF;
+        __delay_ms(1000);
+        
+    
     return;
 }
